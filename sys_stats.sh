@@ -50,6 +50,4 @@ cd System_Stats
     # 1. Any Sata devices connected to the machine along with human readable sizes of the devices
     # 2. More specific information about each device that is connected to the machine
     
-    lsscsi -s
-    sudo hdparm /dev/sda
-    sudo hdparm /dev/sr0
+    (lsscsi -s & sudo hdparm /dev/sda & sudo hdparm /dev/sr0) > sata
