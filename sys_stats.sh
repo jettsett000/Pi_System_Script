@@ -24,7 +24,7 @@ cd System_Stats
     # 1. Do not print any serial numbers or sensitive information related to the system
     # 2. All network interfaces
     > network
-    echo "Network Interface Info: $(lspci)" >> network
+    echo "Network Interface Info: $(sudo lshw -sanitize -class network)" >> network
     
     
 # Output the following information to a file called disk.html
